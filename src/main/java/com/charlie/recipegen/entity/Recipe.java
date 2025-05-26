@@ -19,7 +19,6 @@ public class Recipe {
 
     private String title;
 
-
     @ManyToMany
     @JoinTable(
             name = "recipe_ingredients",
@@ -35,8 +34,6 @@ public class Recipe {
 
     private NutritionalProfile nutritionalProfile;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id")
-    private User author;
+    private Integer servings;
 
 }
