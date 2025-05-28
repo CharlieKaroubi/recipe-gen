@@ -19,6 +19,10 @@ public class Recipe {
 
     private String title;
 
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User author;
+
     @ManyToMany
     @JoinTable(
             name = "recipe_ingredients",
